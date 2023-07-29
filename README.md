@@ -5,72 +5,13 @@
 ### <strong>👇 Run this command to see my ProfileCard</strong>
 
 ```bash
-npx imvv
+npx deepanshugoel
 ```
 
 ***
 <br>
 
-### <strong>🚀 DEMO</strong>
 
-![CLI_ProfileCard-demo](https://user-images.githubusercontent.com/34159717/121740205-650ef780-cb1a-11eb-8011-6e6d88227a18.gif)
-<br>
-<br>
-
-
-
-<br>
-
-## Follow step by step guide to make your own :heart_eyes: [Here](https://vblogs.medium.com/make-your-identity-in-cli-world-afec73066001) and share it in your Workshops, Seminars to connect with new people.
-
-***
-
-> Note: Windows powershell does not support animations. It will only show a line ( | ). For better experience run the command in your favourite editor.
-<br>
-
-***
-
-<br>
-
-# Contributions 
-
-All contributions are welcome. Please refer [CONTRIBUTING.md](https://github.com/viditvarshney/CLI_ProfileCard/tree/main/.github/CONTRIBUTING.md)
-<br>
-
-- Facing any Error while creating your Profile Card. Solve them [Here](https://github.com/viditvarshney/CLI_ProfileCard/discussions/categories/q-a)
-
-- Want to add New Features. Let's Discuuss about them [Here](https://github.com/viditvarshney/CLI_ProfileCard/discussions/categories/ideas)
-
-<br>
-
-***
-
-<br>
-
-# Screenshots
-
-![animations](screenshots/0.png)
-
-
-![animations](screenshots/4.png)
-
-
-![animations](screenshots/5.png)
-
-
-![animations](screenshots/2.png)
-
-<br>
-
-![animations](screenshots/6.png)
-
-
-![animations](screenshots/3.png)
-<br>
-
-![animations](screenshots/1.png)
-
-<br>
 
 # Credits: 
 This Project is inspired from

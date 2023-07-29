@@ -29,6 +29,7 @@ const {
     blog_username,
     npx_card_handle,
     job_title,
+    portfolio_url
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -39,14 +40,6 @@ const questions = [
         name: "action",
         message: "What you want to do?",
         choices: [
-            // Share Your profile Card
-            {
-                name: `Share Your ${chalk.cyanBright.bold("Profile Card")} and Tell Others: `,
-                value: () => {
-                    open(`https://twitter.com/intent/tweet?text=I created my Profile Card. Run npx ${npx_card_handle} to view. Make Your own at: https://github.com/viditvarshney/CLI_ProfileCard Love this Project by @_imvv` );
-                    console.log("\nRedirecting You...\n");
-                },
-            },
             // Send an email
             {
                 name: `Say 👋, on my ${chalk.green.bold("Email")}?`,
@@ -58,19 +51,11 @@ const questions = [
             
             // Here you can add your Projects, Games or any showcase Project
 
-            // Reaction Timer Game
-            {
-                name: `Play ${chalk.yellow.bold("Reaction Timer")}?`,
-                value: () => {
-                    open(`https://viditvarshney.github.io/Reaction-Timer.github.io/`);
-                    console.log("\nLoading the Game...\n");
-                },
-            },
-            //// Quit
+            // Reaction Timer Gam
             {
                 name: "Quit.",
                 value: () => {
-                    console.log(" Have a nice Day. Although You can support the project by giving a Star ⭐.\n");
+                    console.log(" Have a nice Day.\n");
                 },
             },
         ],
@@ -78,51 +63,57 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green(`                  ${user_name} / ${npx_card_handle}`),
-    // You can Style the Job titile if You can, As I did.
-    // You can also keep it simple by replacing the Line 65 by:
-    // work: `${chalk.white(`{job_title}`)}`
-    work:  `${chalk.white("Project Engineer at")} ${chalk.bold.hex("#2b82b2").bold("Wipro Ltd")}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.yellowBright(`${twitter_username}`),
-    github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blueBright(`${linkedin_username}`),
-    Blogs: chalk.gray("https://medium.com/@") + chalk.redBright(`${blog_username}`),
-    npx: chalk.green("npx") + " " + chalk.white(`${npx_card_handle}`),
+  name: chalk.bold.green(`                  ${user_name} / ${npx_card_handle}`),
+  // You can Style the Job titile if You can, As I did.
+  // You can also keep it simple by replacing the Line 65 by:
+  // work: `${chalk.white(`{job_title}`)}`
+  work: `${chalk.white("Software Developer at")} ${chalk.bold
+    .hex("#2b82b2")
+    .bold(job_title)}`,
+  twitter:
+    chalk.gray("https://twitter.com/") +
+    chalk.yellowBright(`${twitter_username}`),
+  github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
+  linkedin:
+    chalk.gray("https://linkedin.com/in/") +
+    chalk.blueBright(`${linkedin_username}`),
+  Blogs:
+    chalk.gray("https://hashnode.com/@") + chalk.redBright(`${blog_username}`),
+  Portfolio:
+    chalk.gray("https://peerlist.io/") + chalk.greenBright(`${portfolio_url}`),
+  npx: chalk.green("npx") + " " + chalk.white(`${npx_card_handle}`),
 
-    labelWork: chalk.white.bold("       Work:"),
-    labelTwitter: chalk.white.bold("    Twitter:"),
-    labelGitHub: chalk.white.bold("     GitHub:"),
-    labelLinkedIn: chalk.white.bold("   LinkedIn:"),
+  labelWork: chalk.white.bold("       Work:"),
+  labelTwitter: chalk.white.bold("    Twitter:"),
+  labelGitHub: chalk.white.bold("     GitHub:"),
+  labelLinkedIn: chalk.white.bold("   LinkedIn:"),
     labelBlogs: chalk.white.bold("      Blogs:"),
-    labelCard: chalk.white.bold("       Card:"),
+    labelPortfolio: chalk.white.bold("    Portfolio:"),
+  labelCard: chalk.white.bold("       Card:"),
 };
 
 const me = boxen(
     [
         `${data.name}`,
-        ``,
         `${data.labelWork}  ${data.work}`,
         ``,
         `${data.labelTwitter}  ${data.twitter}`,
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
         `${data.labelBlogs}  ${data.Blogs}`,
+        `${data.labelPortfolio}  ${data.Portfolio}`,
         ``,
-        `${data.labelCard}  ${data.npx}`,
-        ``,
-        `${chalk.italic("Hey! I'm Vidit, I am working with Wipro Ltd as a Project Engineer")}`,
+        `${chalk.italic("Hey! I'm Deepanshu Goel. Building scalable applications and currently working as Software Developer @Mages Studio")}`,
         `${chalk.italic("I love to connect with new people, Say 'Hii' via Social Media or E-mail")}`,
     ].join("\n"),
     {
         margin: 1,
         float: "center",
         padding: 1,
-        borderStyle: "singleDouble",
         borderColor: "blue",
-        align:"left",
-        backgroundColor: "#660033",
-        
-
+        align: "left",
+        textAlignment: "left",
+        backgroundColor: "#272727",
         
     }
 );
@@ -130,7 +121,7 @@ function CardPrinter() {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(console.log(me));
-      }, 12000);
+      }, 6000);
     });
 }
 
@@ -143,7 +134,7 @@ function Loaded() {
     setTimeout(() => {
         spinner.indent = 30;
         spinner.spinner = 'soccerHeader';
-        spinner.text = `${chalk.green('Support Project by giving a Star ⭐ ')}`;
+        spinner.text = `${chalk.green('Do reach me out for any ideas that you have ⭐ ')}`;
     }, 2000);
     
     setTimeout(() => {

@@ -1,7 +1,7 @@
 {
-  "name": "imvv",
+  "name": "deepanshugoel",
   "version": "2.0.0",
-  "description": "This is the Profile Card for Vidit Varshney (imvv).",
+  "description": "This is the Profile Card for Deepanshu Goel(deepanshugoel).",
   "main": "node card.js",
   "bin": "./card.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viditvarshney/CLI_ProfileCard.git"
+    "url": "git+https://github.com/symaticvisuals/deeepanshu-custom-npx.git"
   },
   "keywords": [
     "profile-card",
@@ -18,12 +18,9 @@
     "businessCard",
     "socialCard"
   ],
-  "author": "Vidit Varshney <viditvarshney222@gmail.com>",
+  "author": "Deepanshu Goel <symaticvisuals02@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/viditvarshney/CLI_ProfileCard/issues"
-  },
-  "homepage": "https://github.com/viditvarshney/CLI_ProfileCard#readme",
+  "homepage": "https://github.com/symaticvisuals/deeepanshu-custom-npx/blob/main/README.md",
   "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
